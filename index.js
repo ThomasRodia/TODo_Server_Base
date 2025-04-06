@@ -58,8 +58,8 @@ app.delete("/todo/:id", (req, res) => {
 
 
 const options = {
-   key: fs.readFileSync('/etc/letsencrypt/live/tuodominio.it/privkey.pem'),
-   cert: fs.readFileSync('/etc/letsencrypt/live/tuodominio.it/fullchain.pem')
+   key: fs.readFileSync('/etc/letsencrypt/live/rodiathomas.it/privkey.pem'),
+   cert: fs.readFileSync('/etc/letsencrypt/live/rodiathomas.it/fullchain.pem')
  };
  
  https.createServer(options, app).listen(80, () => {
