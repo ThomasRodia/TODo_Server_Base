@@ -1,5 +1,6 @@
 const express = require("express");
 const http = require("http");
+const https=require("https");
 const app = express();
 
 const bodyParser = require('body-parser');
@@ -50,10 +51,22 @@ app.delete("/todo/:id", (req, res) => {
 
 })
 
-const server = http.createServer(app);
+//const server = http.createServer(app);
     
-      server.listen(5050, () => {
-        console.log("- server running");
-      })
+
+
+
+const options = {
+   key: fs.readFileSync('/etc/letsencrypt/live/tuodominio.it/privkey.pem'),
+   cert: fs.readFileSync('/etc/letsencrypt/live/tuodominio.it/fullchain.pem')
+ };
+ 
+ https.createServer(options, app).listen(80, () => {
+   console.log('HTTPS server attivo sulla porta 80');
+ });
+
+     // server.listen(5050, () => {
+       // console.log("- server running");
+      //})
 
 

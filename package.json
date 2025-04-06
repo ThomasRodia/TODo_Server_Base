@@ -41,6 +41,7 @@
     "hasown": "^2.0.2",
     "http": "^0.0.1-security",
     "http-errors": "^2.0.0",
+    "https": "^1.0.0",
     "iconv-lite": "^0.4.24",
     "inherits": "^2.0.4",
     "init": "^0.1.2",
@@ -89,7 +90,6 @@
     "utils-merge": "^1.0.1",
     "vary": "^1.1.2"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
